@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.main_activity)
-        Log.v(TAG,"onCreate")
+        Log.v(TAG,"onCreated")
         bottomNavigation = findViewById(R.id.bottom_navigation)
         mServiceFragment = ServiceFragment()
         mCartFragment = CartFragment()
