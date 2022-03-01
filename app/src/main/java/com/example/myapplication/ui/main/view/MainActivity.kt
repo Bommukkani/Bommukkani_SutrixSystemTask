@@ -1,6 +1,7 @@
 package com.example.myapplication.ui.main.view
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -22,7 +23,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.main_activity)
+        Log.v(TAG,"onCreate")
         bottomNavigation = findViewById(R.id.bottom_navigation)
         mServiceFragment = ServiceFragment()
         mCartFragment = CartFragment()
