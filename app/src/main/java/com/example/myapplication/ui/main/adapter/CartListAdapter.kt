@@ -22,41 +22,6 @@ class CartListAdapter(
     class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(cartData: Cart_DATA) {
 
-//            var service = ""
-//            var img = ""
-//            var price = ""
-//
-//            val value = ArrayList<String>()
-//            value.clear()
-//            for (item in cartData.service!!) {
-//
-//                service = "" + service + cartData.service!!.map { it ->
-//                    it.name.toString().replace("[", "").replace("]", "")
-//                }
-//
-//                price = "" + price + cartData.service!!.map { it ->
-//                    it.price.toString().replace("[", "").replace("]", "")
-//
-//
-//                }
-//            }
-//
-//
-//            for (item in cartData.employee!!) {
-//                img = "" + cartData.employee!!.map { it ->
-//                    it.image.toString().replace("[", "").replace("]", "")
-//                }
-//                value.add(img)
-//
-//            }
-//
-//
-//
-//
-//            Log.v("imggg:", img)
-//            itemView.tvName.text = service.toString()
-//            itemView.tvPrice.text = "" + price.toString()
-
             itemView.recyclerview.setAdapter(
                 CartFileListAdapter(
                     cartData.employee!!
@@ -68,20 +33,6 @@ class CartListAdapter(
                 )
             )
 
-
-
-//            Glide.with(itemView.ivIcon.context)
-//                    .load(img)
-//                    .into(itemView.ivIcon)
-////
-//            itemView.setOnClickListener() {
-//                Toast.makeText(itemView.context, "Its a toast!", Toast.LENGTH_SHORT).show()
-//                val intent = Intent(itemView.context, AddCartActivity::class.java)
-//                intent.putExtra("Username", user.image)
-//// To pass any data to next activity
-//// start your next activity
-//                itemView.context.startActivity(intent)
-//            }
 
 
         }
@@ -100,10 +51,7 @@ class CartListAdapter(
     override fun onBindViewHolder(holder: DataViewHolder, position: Int) =
         holder.bind(users[position])
 
-    fun addData(list: List<Cart_DATA>) {
-        users.addAll(list)
-        notifyDataSetChanged()
-    }
+
 }
 
 

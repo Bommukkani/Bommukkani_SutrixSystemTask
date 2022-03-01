@@ -10,7 +10,7 @@ import retrofit2.Response
 
 class MainViewModel constructor(private val repository: MainRepository)  : ViewModel() {
 
-    val movieList = MutableLiveData<Data>()
+    val dataList = MutableLiveData<Data>()
     val errorMessage = MutableLiveData<String>()
 
 
@@ -19,7 +19,7 @@ class MainViewModel constructor(private val repository: MainRepository)  : ViewM
         val response = repository.getData()
         response.enqueue(object : Callback<Data> {
             override fun onResponse(call: Call<Data>, response: Response<Data>) {
-                movieList.postValue(response.body())
+                dataList.postValue(response.body())
             }
 
             override fun onFailure(call: Call<Data>, t: Throwable) {
@@ -33,7 +33,7 @@ class MainViewModel constructor(private val repository: MainRepository)  : ViewM
         val response = repository.getEmployee()
         response.enqueue(object : Callback<Data> {
             override fun onResponse(call: Call<Data>, response: Response<Data>) {
-                movieList.postValue(response.body())
+                dataList.postValue(response.body())
             }
 
             override fun onFailure(call: Call<Data>, t: Throwable) {

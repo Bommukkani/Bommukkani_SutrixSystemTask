@@ -196,7 +196,7 @@ class EmployeeFragment : Fragment() , CartAdapter.ItemSelectedListner{
         )
         recyclerView.adapter = adapter
         adapter.itemSelectedListner = this
-        viewModel.movieList.observe(this, Observer {
+        viewModel.dataList.observe(this, Observer {
             Log.d(TAG, "onCreate: ${it.responseCode}")
 
             adapter.addData(it.data!!)

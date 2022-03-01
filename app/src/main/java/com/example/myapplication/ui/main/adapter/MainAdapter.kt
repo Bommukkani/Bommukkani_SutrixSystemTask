@@ -1,11 +1,9 @@
 package com.example.myapplication.ui.main.adapter
 
-import android.content.Intent
-import android.util.Log
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.myapplication.R
@@ -13,7 +11,6 @@ import com.example.myapplication.data.model.Datum
 import com.example.myapplication.utils.Shared_Common_Pref
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.item_layout.view.*
-import java.util.*
 import kotlin.collections.ArrayList
 
 
@@ -33,14 +30,6 @@ class MainAdapter(
                     .load(user.image)
                     .into(itemView.ivIcon)
 
-
-//            val gson = Gson()
-//            val type = object : TypeToken<User>() {
-//            }.type
-//
-//            cart_curr_val = gson.fromJson(sharedCommonPref.getvalue("CART_DATA"), type)
-
-            Log.v("service_list", "testttttt:" + sharedCommonPref.getvalue("service_list"))
 
             itemView.setOnClickListener() {
                sharedCommonPref.save("service_data", Gson().toJson(user))
@@ -70,11 +59,6 @@ class MainAdapter(
 
         users.addAll(list)
         notifyDataSetChanged()
-        val gson = Gson()
-        Log.v("hhdjhjfh", gson.toJson(users))
-        println("sdsfgds")
-        println(gson.toJson(users))
-//        System.out.println(gso(list.toArray()));
 
     }
 

@@ -62,7 +62,7 @@ class ServiceFragment : Fragment(), MainAdapter.ItemClickListner {
 
         recyclerView.adapter = adapter
         adapter.setItemClickListner(this)
-        viewModel.movieList.observe(this, Observer {
+        viewModel.dataList.observe(this, Observer {
             Log.d(TAG, "onCreate: ${it.responseCode}")
 
             adapter.addData(it.data!!)

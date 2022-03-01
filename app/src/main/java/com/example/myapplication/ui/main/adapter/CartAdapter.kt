@@ -37,25 +37,8 @@ class CartAdapter(
             itemView.llcartParent.setBackgroundColor(if (user.isSelected()) activity.resources.getColor(R.color.greentrans) else Color.WHITE)
             itemView.llcartParent.setOnClickListener() {
 
-                // values.add("" + user.id + "," + user.image + "," + user.name + "," + user.price)
-
-//                current_list.add(user)
-//
-//                val distinct = current_list.toSet().toList();
-//
-//
-//                val gson = Gson()
-//
-//                sharedCommonPref.save("CART_DATA", gson.toJson(distinct))
-//                Log.v("service_data:", service_data)
-//
-//                Log.v("cart_list:", gson.toJson(current_list))
-
                 user.setSelected(!user.isSelected())
-                //AddCartActivity.addData()
-//                itemView.llcartParent.setBackgroundColor(itemView.context.resources.getColor(R.color.greentrans))
-                itemView.llcartParent.setBackgroundColor(if (user.isSelected()) activity.resources.getColor(R.color.greentrans) else Color.WHITE)
-//                Toast.makeText(itemView.context, user.name, Toast.LENGTH_SHORT).show()
+                   itemView.llcartParent.setBackgroundColor(if (user.isSelected()) activity.resources.getColor(R.color.greentrans) else Color.WHITE)
                 itemSelectedListner.onItemSelected(user, user.isSelected())
             }
 
@@ -82,36 +65,6 @@ class CartAdapter(
     }
 
 
-
-    private fun saveData() {
-
-
-        sharedCommonPref.save("", "")
-//        val sharedPreferences = activity.getSharedPreferences("shared preferences", MODE_PRIVATE)
-//        val editor = sharedPreferences.edit()
-//        val gson = Gson()
-//        val json = gson.toJson(values)
-//        editor.putString("task list", json)
-//        editor.apply()
-    }
-
-//    private fun loadData() {
-//        val sharedPreferences = activity.getSharedPreferences("shared preferences", MODE_PRIVATE)
-//        val gson = Gson()
-//        val json = sharedPreferences.getString("task list", "")
-//        val type = object : TypeToken<ArrayList<String>>() {
-//        }.type
-//
-//        if (json == null)
-//            values = ArrayList()
-//        else
-//            values = gson.fromJson(json, type)
-//    }
-
-    @JvmName("setItemSelectedListner1")
-    fun setItemSelectedListner(itemSelectedListner: ItemSelectedListner){
-        this.itemSelectedListner = itemSelectedListner
-    }
 
     interface ItemSelectedListner{
         fun onItemSelected(user: Datum, isSlected : Boolean)
