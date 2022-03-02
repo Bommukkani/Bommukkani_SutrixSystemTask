@@ -9,7 +9,10 @@
         <entry key="..\:/AndroidCode/AndroidConcepts/MyApplication_MVVM_KOTLIN_API/app/src/main/res/layout/cart_service_list_layout.xml" value="0.27291666666666664" />
         <entry key="..\:/AndroidCode/AndroidConcepts/MyApplication_MVVM_KOTLIN_API/app/src/main/res/layout/fragment_cart.xml" value="0.27291666666666664" />
         <entry key="..\:/AndroidCode/AndroidConcepts/MyApplication_MVVM_KOTLIN_API/app/src/main/res/layout/fragment_employee.xml" value="0.27291666666666664" />
+        <entry key="..\:/AndroidCode/AndroidConcepts/MyApplication_MVVM_KOTLIN_API/app/src/main/res/layout/fragment_service.xml" value="0.14270833333333333" />
         <entry key="..\:/AndroidCode/AndroidConcepts/MyApplication_MVVM_KOTLIN_API/app/src/main/res/layout/item_layout.xml" value="0.27291666666666664" />
+        <entry key="..\:/AndroidCode/AndroidConcepts/MyApplication_MVVM_KOTLIN_API/app/src/main/res/layout/main_activity.xml" value="0.14270833333333333" />
+        <entry key="..\:/AndroidCode/AndroidConcepts/MyApplication_MVVM_KOTLIN_API/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.14270833333333333" />
       </map>
     </option>
   </component>
